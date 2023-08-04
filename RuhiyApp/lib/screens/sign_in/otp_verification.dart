@@ -7,6 +7,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/app_theme.dart';
+import 'package:ruhiyapp/utils/routes.dart';
 import 'package:ruhiyapp/widgets/custom_button.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 import 'package:ruhiyapp/widgets/textbutton.dart';
@@ -118,11 +119,13 @@ class OtpVerfication extends StatelessWidget {
 
                 CustomButton(
                   buttonTitle: AppStrings.confirm,
-                    onTap: (){}
+                    onTap: (){
+                      Get.toNamed(Routes.getOnboardingScreenOne());
+                    }
                 ),
                 15.verticalSpace,
 
-                CustomTextButton(buttonTitle: AppStrings.resendCode, titleColor: AppColors.greyColor,)
+                const CustomTextButton(buttonTitle: AppStrings.resendCode, titleColor: AppColors.greyColor,)
               ],
             ),
           ],

@@ -1,7 +1,11 @@
 import 'package:get/route_manager.dart';
+import 'package:ruhiyapp/screens/sign_in/onboarding_screen/onboarding_screen_four.dart';
+import 'package:ruhiyapp/screens/sign_in/onboarding_screen/onboarding_screen_three.dart';
 import 'package:ruhiyapp/screens/sign_in/sign_in_screen.dart';
 import 'package:ruhiyapp/screens/splash_screen.dart';
 
+import '../screens/sign_in/onboarding_screen/onboarding_screen_one.dart';
+import '../screens/sign_in/onboarding_screen/onboarding_screen_two.dart';
 import '../screens/sign_in/otp_verification.dart';
 import '../screens/sign_in/registration_form.dart';
 
@@ -10,6 +14,12 @@ class Routes{
   static String getSignInScreen() => SignInScreen.id;
   static String getRegistrationFormForSignIn() => RegistrationFormSignUp.id;
   static String getSignUpOtpVerification() => OtpVerfication.id;
+  static String getOnboardingScreenOne() => OnboardingScreenOne.id;
+  static String getOnboardingScreenTwo() => OnboardingScreenTwo.id;
+  static String getOnboardingScreenThree() => OnboardingScreenThree.id;
+  static String getOnboardingScreenFour() => OnboardingScreenFour.id;
+
+
 
 
 
@@ -34,5 +44,26 @@ class Routes{
         page: () => OtpVerfication(),
         transition: Transition.cupertino
     ),
+    GetPage(
+        name: OnboardingScreenOne.id,
+        page: () => OnboardingScreenOne(),
+        transition: Transition.cupertino
+    ),
+    GetPage(
+        name: OnboardingScreenTwo.id,
+        page: () => OnboardingScreenTwo(),
+        transition: Transition.cupertino
+    ),
+    GetPage(
+        name: OnboardingScreenThree.id,
+        page: () => OnboardingScreenThree(),
+        transition: Transition.cupertino
+    ),
+    GetPage(
+        name: OnboardingScreenFour.id,
+        page: () => OnboardingScreenFour(),
+        transition: Transition.cupertino
+    ),
+
   ];
 }

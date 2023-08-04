@@ -5,8 +5,7 @@ import 'package:ruhiyapp/widgets/label_widgets.dart';
 class CustomTextButton extends StatelessWidget {
   final String buttonTitle;
   final Color titleColor;
-  const CustomTextButton({super.key, this.buttonTitle = '',
-    this.titleColor = Colors.black});
+  const CustomTextButton({super.key, this.buttonTitle = '', this.titleColor = Colors.black});
 
   @override
   Widget build(BuildContext context) {
