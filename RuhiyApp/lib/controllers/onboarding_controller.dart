@@ -11,14 +11,10 @@ final soundBtn = [
     "assets/images/sound-offSvg.svg",
   ];
 
-
-
-
   // English prayer name
   final engPrayerTime = [
     "Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"
   ];
-
 
   // Arabic prayer name
   final arbPrayerTime = [

@@ -62,8 +62,9 @@ class RegistrationFormSignUp extends StatelessWidget {
                       ),
                     ),
                     7.verticalSpace,
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       hintText: AppStrings.firstName,
+                      controller: controller.firstNameController,
                     ),
                     20.verticalSpace,
                     Align(
@@ -76,8 +77,9 @@ class RegistrationFormSignUp extends StatelessWidget {
                       ),
                     ),
                     7.verticalSpace,
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       hintText: AppStrings.lastName,
+                      controller: controller.lastNameController,
                     ),
                     20.verticalSpace,
                     Align(
@@ -90,8 +92,9 @@ class RegistrationFormSignUp extends StatelessWidget {
                       ),
                     ),
                     7.verticalSpace,
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       hintText: AppStrings.emailAddress,
+                      controller: controller.emailController,
                     ),
                     20.verticalSpace,
 
@@ -114,8 +117,9 @@ class RegistrationFormSignUp extends StatelessWidget {
                       ],
                     ),
                     7.verticalSpace,
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       hintText: AppStrings.dateOfBirth,
+                      controller: controller.dateOfBirthController,
                     ),
                     30.verticalSpace,
                     Align(

@@ -74,8 +74,9 @@ class SignInScreen extends StatelessWidget {
             ),
           ),
           7.verticalSpace,
-          const CustomTextFormField(
+          CustomTextFormField(
             hintText: AppStrings.emailAddress,
+            controller: controller.emailController,
           ),
           30.verticalSpace,
           CustomButton(
