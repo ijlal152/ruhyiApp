@@ -1,0 +1,12 @@
+com.example.ruhiyapp-jetified-window-1.0.0-beta04-0 /Users/mapmac/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
+com.example.ruhiyapp-jetified-annotation-experimental-1.1.0-1 /Users/mapmac/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.ruhiyapp-core-1.6.0-2 /Users/mapmac/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
+com.example.ruhiyapp-jetified-window-java-1.0.0-beta04-3 /Users/mapmac/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.ruhiyapp-debug-4 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/android/app/src/debug/res
+com.example.ruhiyapp-main-5 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/android/app/src/main/res
+com.example.ruhiyapp-pngs-6 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/generated/res/pngs/debug
+com.example.ruhiyapp-resValues-7 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/generated/res/resValues/debug
+com.example.ruhiyapp-rs-8 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/generated/res/rs/debug
+com.example.ruhiyapp-mergeDebugResources-9 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.ruhiyapp-mergeDebugResources-10 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.ruhiyapp-merged_res-11 /Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/intermediates/merged_res/debug
