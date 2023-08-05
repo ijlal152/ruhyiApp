@@ -1,4 +1,0 @@
-#Fri Aug 04 18:25:07 PKT 2023
-base.0=/Users/mapmac/Documents/OfficeProject/ruhyiApp/RuhiyApp/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
