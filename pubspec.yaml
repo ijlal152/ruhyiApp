@@ -90,6 +90,10 @@ flutter:
     - family: bold
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
+    
+    - family: urduNajd
+      fonts:
+        - asset: assets/fonts/UrduNajdv3Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

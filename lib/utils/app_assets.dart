@@ -17,5 +17,28 @@ class AppAssets{
   static const String onboardingAvatar3Svg = "assets/images/onboardingAvatar3.svg";
   static const String soundHighSvg = "assets/images/sound-highSvg.svg";
   static const String soundLowSvg = "assets/images/sound-offSvg.svg";
+  static const String dropDownArrowSvg = "assets/images/arrow-drop-down.svg";
+  static const String sliderSvg = "assets/images/slider.svg";
+  static const String qiblaSvg = "assets/images/qiblaSvg.svg";
+  static const String personSvg = "assets/images/personSvg.svg";
+  static const String handsSvg = "assets/images/hands.svg";
+  static const String bookSvg = "assets/images/bookSvg.svg";
+  static const String watchSvg = "assets/images/watchSvg.svg";
+  static const String buldSvg = "assets/images/bulbSvg.svg";
+  static const String backArrow = "assets/images/back-arrow.svg";
+  static const String shahadaSvg = "assets/images/shahada.svg";
+  static const String salahSvg = "assets/images/salah.svg";
+  static const String zakatSvg = "assets/images/zakat.svg";
+  static const String sawmSvg = "assets/images/sawmSvg.svg";
+  static const String kabahSvg = "assets/images/Kabah.svg";
+  static const String struggleSvg = "assets/images/struggle.svg";
+  static const String AllahNameSvg = "assets/images/Allah_name.svg";
+  static const String MuhammadNameSvg = "assets/images/Muhammad_name.svg";
+  static const String angelNameSvg = "assets/images/angelName.svg";
+  static const String judgmentDaySvg = "assets/images/judgmentDay.svg";
+  static const String fateSvg = "assets/images/fate.svg";
+  static const String quranSvg = "assets/images/quranSvg.svg";
+
+  
 
 }

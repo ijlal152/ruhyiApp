@@ -6,6 +6,7 @@ import 'package:ruhiyapp/controllers/onboarding_controller.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/app_theme.dart';
+import 'package:ruhiyapp/utils/routes.dart';
 import 'package:ruhiyapp/widgets/custom_button.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 
@@ -22,7 +23,7 @@ class OnboardingScreenFour extends StatelessWidget {
     return GetBuilder<OnBoardingController>(
       builder: (controller){
         return Stack(
-      fit: StackFit.expand,
+      //fit: StackFit.expand,
       children: <Widget>[
         Image.asset(
           AppAssets.backGround,
@@ -38,6 +39,7 @@ class OnboardingScreenFour extends StatelessWidget {
             height: Get.height,
             padding: EdgeInsets.only(top: 60.h, left: 21.w, right: 21.w),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(AppAssets.fourSvg, height: 36.h, width: 36.w,),
                 50.verticalSpace,
@@ -49,9 +51,10 @@ class OnboardingScreenFour extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: AppColors.greenColor,
                 ),
-                10.verticalSpace,
-                Expanded(
+                20.verticalSpace,
+                Flexible(
                   child: ListView.separated(
+                    padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     itemBuilder: (context, index){
                       return PrayerRow(
@@ -68,6 +71,11 @@ class OnboardingScreenFour extends StatelessWidget {
                     itemCount: controller.engPrayerTime.length
                   ),
                 ),
+                40.verticalSpace,
+                const CustomRadioWidget(
+                  text: AppStrings.linkToCalendar, 
+                  isSelected: true
+                ),
 
               ],
             ),
@@ -78,7 +86,9 @@ class OnboardingScreenFour extends StatelessWidget {
           left: 0.w,
           right: 0.w,
           child: CustomButton(
-            onTap: (){},
+            onTap: (){
+              Get.toNamed(Routes.getOnboardingScreenFive());
+            },
             buttonTitle: AppStrings.next,
             buttonWidth: 185.w,
           ),

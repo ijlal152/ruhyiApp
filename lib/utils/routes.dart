@@ -1,10 +1,12 @@
 import 'package:get/route_manager.dart';
+import 'package:ruhiyapp/screens/sign_in/onboarding_screen/onboarding_screen_five.dart';
 import 'package:ruhiyapp/screens/sign_in/onboarding_screen/onboarding_screen_four.dart';
 import 'package:ruhiyapp/screens/sign_in/onboarding_screen/onboarding_screen_three.dart';
 import 'package:ruhiyapp/screens/sign_in/sign_in_screen.dart';
 import 'package:ruhiyapp/screens/splash_screen.dart';
 
 import '../screens/sign_in/onboarding_screen/onboarding_screen_one.dart';
+import '../screens/sign_in/onboarding_screen/onboarding_screen_six.dart';
 import '../screens/sign_in/onboarding_screen/onboarding_screen_two.dart';
 import '../screens/sign_in/otp_verification.dart';
 import '../screens/sign_in/registration_form.dart';
@@ -18,10 +20,8 @@ class Routes{
   static String getOnboardingScreenTwo() => OnboardingScreenTwo.id;
   static String getOnboardingScreenThree() => OnboardingScreenThree.id;
   static String getOnboardingScreenFour() => OnboardingScreenFour.id;
-
-
-
-
+  static String getOnboardingScreenFive() => OnboardingScreenFive.id;
+  static String getOnboardingScreenSix() => OnboardingScreenSix.id;
 
   static List<GetPage> routeMap = [
     GetPage(
@@ -62,6 +62,16 @@ class Routes{
     GetPage(
         name: OnboardingScreenFour.id,
         page: () => OnboardingScreenFour(),
+        transition: Transition.cupertino
+    ),
+    GetPage(
+        name: OnboardingScreenFive.id,
+        page: () => OnboardingScreenFive(),
+        transition: Transition.cupertino
+    ),
+    GetPage(
+        name: OnboardingScreenSix.id,
+        page: () => OnboardingScreenSix(),
         transition: Transition.cupertino
     ),
 

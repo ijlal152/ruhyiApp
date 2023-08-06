@@ -1,11 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ruhiyapp/utils/app_assets.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
+import 'package:ruhiyapp/utils/app_theme.dart';
 import 'package:ruhiyapp/widgets/custom_button.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
+import 'package:ruhiyapp/widgets/radio_buttons.dart';
 
 class CustomRows extends StatelessWidget {
   final String text;
@@ -29,6 +32,7 @@ class CustomRows extends StatelessWidget {
             fontSize: 14.sp,
             color: AppColors.darkBlue,
             fontWeight: FontWeight.w400,
+            textHeight: 1.3.h,
             textAlign: TextAlign.left,
           ),
         ),
@@ -96,16 +100,21 @@ class PrayerRow extends StatelessWidget {
             children: [
               SvgPicture.asset(volumnBtn),
               20.horizontalSpace,
-              LabelWidget(
-                text: prayerTime,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.darkBlue,
+              SizedBox(
+                width: 120.w,
+                child: LabelWidget(
+                  text: prayerTime,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.darkBlue,
+                  textAlign: TextAlign.left,
+                ),
               ),
-              40.horizontalSpace,
+              //40.horizontalSpace,
               LabelWidget(
                 text: arabicPrayerTime,
                 fontSize: 16.sp,
+                fontFamily: urdu,
                 fontWeight: FontWeight.w400,
                 color: AppColors.darkBlue,
               ),
@@ -113,6 +122,130 @@ class PrayerRow extends StatelessWidget {
           ),
           SvgPicture.asset(icon),
         ]),
+      ),
+    );
+  }
+}
+
+class CustomRadioWidget extends StatelessWidget {
+  final String text;
+  final bool isSelected;
+  const CustomRadioWidget(
+      {super.key, required this.text, required this.isSelected});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        RadioButtonWidget(
+          selectedSvg: AppAssets.selectedSvg,
+          unSelectedSvg: AppAssets.unSelectedSvg,
+          isSelected: isSelected,
+          onTap: () {},
+        ),
+        14.horizontalSpace,
+        LabelWidget(
+          text: text,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.darkBlue,
+        ),
+      ],
+    );
+  }
+}
+
+class CustomDropDown extends StatelessWidget {
+  List<DropdownMenuItem<String>> dropdownItems;
+  final double height;
+  final double width;
+  String selectedValue;
+  Function(String?)? onChanged;
+  CustomDropDown({
+    super.key,
+    required this.dropdownItems,
+    required this.selectedValue,
+    this.height = 30,
+    this.width = 100,
+    this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width.w,
+      height: height.h,
+      //padding: EdgeInsets.symmetric(horizontal: 10.w),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10.r),
+          border: Border.all(color: AppColors.greyColor.withOpacity(0.5))),
+      child: DropdownButton(
+          style: TextStyle(
+            fontSize: 12.sp,
+            color: AppColors.darkBlue,
+            fontWeight: FontWeight.w500,
+            fontFamily: regular,
+          ),
+          elevation: 16,
+          underline: const SizedBox(),
+          iconSize: 24.h,
+          items: dropdownItems,
+          value: selectedValue,
+          icon: SvgPicture.asset(AppAssets.dropDownArrowSvg),
+          onChanged: onChanged),
+    );
+  }
+}
+
+class OnboardingWidget extends StatelessWidget {
+  final String title;
+  final String subHeading;
+  final bool enableSubWidget;
+  const OnboardingWidget({super.key, required this.title, this.subHeading = '', this.enableSubWidget = false});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding:
+          EdgeInsets.only(left: 15.w, top: 15.h, bottom: 16.h, right: 15.w),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10.r),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                child: LabelWidget(
+                  text: title,
+                  textAlign: TextAlign.left,
+                  fontSize: 16.sp,
+                  textHeight: 1.3.h,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.darkBlue,
+                ),
+              ),
+              SvgPicture.asset(AppAssets.selectedSvg)
+            ],
+          ),
+          enableSubWidget == true ? Padding(
+            padding: EdgeInsets.only(top: 15.h),
+            child: LabelWidget(
+              text: subHeading,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w500,
+              color: AppColors.greyColor,
+              textAlign: TextAlign.left,
+              textHeight: 1.3.h,
+            ),
+          ) : Container(),
+        ],
       ),
     );
   }

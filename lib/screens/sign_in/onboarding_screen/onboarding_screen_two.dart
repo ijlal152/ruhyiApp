@@ -32,7 +32,7 @@ class OnboardingScreenTwo extends StatelessWidget {
           body: Container(
             width: Get.width,
             height: Get.height,
-            padding: EdgeInsets.only(top: 60.h, left: 35.w, right: 35.w),
+            padding: EdgeInsets.only(top: 60.h, left: 30.w, right: 30.w),
             child: Column(
               children: [
                 SvgPicture.asset(AppAssets.twoSvg, height: 36.h, width: 36.w,),
