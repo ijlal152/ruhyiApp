@@ -10,6 +10,7 @@ class LabelWidget extends StatelessWidget {
   final TextAlign textAlign;
   final String fontFamily;
   final double textHeight;
+
   const LabelWidget({
     super.key,
     this.text = '',

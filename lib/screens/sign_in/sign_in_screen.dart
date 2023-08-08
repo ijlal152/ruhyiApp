@@ -82,7 +82,9 @@ class SignInScreen extends StatelessWidget {
           CustomButton(
             buttonTitle: AppStrings.signIn,
             enableShadow: false,
-            onTap: (){}
+            onTap: (){
+              Get.toNamed(Routes.getHome());
+            }
           ),
 
           

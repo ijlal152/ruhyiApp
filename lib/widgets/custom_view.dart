@@ -7,6 +7,7 @@ import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/app_theme.dart';
 import 'package:ruhiyapp/widgets/custom_button.dart';
+import 'package:ruhiyapp/widgets/custom_checkBox.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 import 'package:ruhiyapp/widgets/radio_buttons.dart';
 
@@ -205,7 +206,9 @@ class OnboardingWidget extends StatelessWidget {
   final String title;
   final String subHeading;
   final bool enableSubWidget;
-  const OnboardingWidget({super.key, required this.title, this.subHeading = '', this.enableSubWidget = false});
+  var value;
+  VoidCallback onTap;
+  OnboardingWidget({super.key, required this.title, this.subHeading = '', this.enableSubWidget = false, this.value, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -231,7 +234,10 @@ class OnboardingWidget extends StatelessWidget {
                   color: AppColors.darkBlue,
                 ),
               ),
-              SvgPicture.asset(AppAssets.selectedSvg)
+              CustomCheckBox(
+                value: value,
+                onTap: onTap,
+              ),
             ],
           ),
           enableSubWidget == true ? Padding(
@@ -246,6 +252,74 @@ class OnboardingWidget extends StatelessWidget {
             ),
           ) : Container(),
         ],
+      ),
+    );
+  }
+}
+
+
+class NavigatableRow extends StatelessWidget {
+  final String img;
+  final String title;
+  final String arrowImg;
+  final String? subHeading;
+  final VoidCallback onTap;
+  NavigatableRow({
+    super.key,
+    this.img = "",
+    this.title = "",
+    this.arrowImg = "assets/images/roundLeftArrow.svg",
+    this.subHeading,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 17.h),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10.r)
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 26.w,
+                  child: SvgPicture.asset(img, color: AppColors.greenColor)
+                ),
+                10.horizontalSpace,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    LabelWidget(
+                  text: title,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.darkBlue,
+                ),
+                //3.verticalSpace,
+                  subHeading != null ? LabelWidget(
+                  text: subHeading!,
+                  fontSize: 8.sp,
+                  textHeight: 1.5.h,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black.withOpacity(0.5),
+                ) : Container(),
+                  ],
+                ),
+              ],
+            ),
+            SvgPicture.asset(arrowImg, height: 20.h),
+          ],
+        ),
       ),
     );
   }

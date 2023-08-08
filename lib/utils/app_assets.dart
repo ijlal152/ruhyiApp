@@ -1,8 +1,10 @@
 class AppAssets{
+  //String basePath = "assets/images/";
   static const String splashBackGround = "assets/images/ruhiyAppSplashBackground.png";
   static const String splashImage1 = "assets/images/testSvg.svg";
   static const String appTitleSplashImage = "assets/images/AppTitleSplash.svg";
   static const String backGround = "assets/images/backGroundPng.png";
+  static const String backGround2 = "assets/images/bg2.png";
   static const String selectedSvg = "assets/images/checkRadioButton.svg";
   static const String unSelectedSvg = "assets/images/unCheckedRadioButton.svg";
   static const String oneSvg = "assets/images/one.svg";
@@ -26,6 +28,7 @@ class AppAssets{
   static const String watchSvg = "assets/images/watchSvg.svg";
   static const String buldSvg = "assets/images/bulbSvg.svg";
   static const String backArrow = "assets/images/back-arrow.svg";
+  static const String backArrowPng = "assets/images/backArrowPng.png";
   static const String shahadaSvg = "assets/images/shahada.svg";
   static const String salahSvg = "assets/images/salah.svg";
   static const String zakatSvg = "assets/images/zakat.svg";
@@ -38,6 +41,23 @@ class AppAssets{
   static const String judgmentDaySvg = "assets/images/judgmentDay.svg";
   static const String fateSvg = "assets/images/fate.svg";
   static const String quranSvg = "assets/images/quranSvg.svg";
+  static const String roundYellowContainerSvg = "assets/images/roundYellowContainer.svg";
+  static const String roundYellowContainerPng = "assets/images/roundYellowContainer.png";
+  static const String fajarBG = "assets/images/fajarBG.png";
+  static const String duhurBG = "assets/images/duhurBG.png";
+  static const String asrBG = "assets/images/asrBG.png";
+  static const String maghribBG = "assets/images/maghribBG.png";
+  static const String eshaBG = "assets/images/eshaBG.png";
+  static const String starSvg = "assets/images/star.svg";
+  static const String roundLeftArrow = "assets/images/roundLeftArrow.svg";
+  static const String notificationBellSvg = "assets/images/notification_bell.svg";
+  static const String user_circleSvg = "assets/images/user_circle.svg";
+  static const String watchSelected = "assets/images/watchSelected.svg";
+  static const String bulbSelected = "assets/images/buldSelected.svg";
+  static const String handSelected = "assets/images/handSelected.svg";
+  static const String homeSelected = "assets/images/homeSelected.svg";
+  static const String homeSvg = "assets/images/home.svg";
+  static const String boolSelected = "assets/images/boolSelected.svg";
 
   
 

@@ -7,10 +7,12 @@ import 'package:ruhiyapp/controllers/onboarding_controller.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/app_theme.dart';
+import 'package:ruhiyapp/utils/routes.dart';
 import 'package:ruhiyapp/widgets/custom_view.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 import '../../../utils/app_assets.dart';
 import '../../../widgets/custom_button.dart';
+import '../../../widgets/custom_checkBox.dart';
 
 class OnboardingScreenSix extends StatelessWidget {
   static const String id = "/OnboardingScreenSix";
@@ -71,7 +73,12 @@ class OnboardingScreenSix extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               color: AppColors.darkBlue,
                             ),
-                            SvgPicture.asset(AppAssets.selectedSvg)
+                            CustomCheckBox(
+                              value: controller.anualZakatCheckBox.value,
+                              onTap: (){
+                                controller.anualZakatCheckBox.value = !controller.anualZakatCheckBox.value;
+                              },
+                            ),
                           ],
                         ),
                         17.verticalSpace,
@@ -123,7 +130,12 @@ class OnboardingScreenSix extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               color: AppColors.darkBlue,
                             ),
-                            SvgPicture.asset(AppAssets.selectedSvg)
+                            CustomCheckBox(
+                              value: controller.setGoalForHajjCheckBox.value,
+                              onTap: (){
+                                controller.setGoalForHajjCheckBox.value = !controller.setGoalForHajjCheckBox.value;
+                              },
+                            ),
                           ],
                         ),
                         17.verticalSpace,
@@ -158,15 +170,23 @@ class OnboardingScreenSix extends StatelessWidget {
                     ),
                   ),
                   10.verticalSpace,
-                  const OnboardingWidget(
+                  OnboardingWidget(
                     title: AppStrings.remindersOfImportantDates, 
                     enableSubWidget: true, 
                     subHeading: "(e.g., Ramadan, Eid ul-Fitr, Eid ul-Adha, Day of Arafah)​",
+                    value: controller.remindersOfImportantDatesCheckBox.value,
+                    onTap: (){
+                      controller.remindersOfImportantDatesCheckBox.value = !controller.remindersOfImportantDatesCheckBox.value;
+                    },
                   ),
                   10.verticalSpace,
-                  const OnboardingWidget(
+                  OnboardingWidget(
                     title: AppStrings.refresherContentOnThe6ArticlesOfFaith, 
                     enableSubWidget: false, 
+                    value: controller.refresherContentCheckBox.value,
+                    onTap: (){
+                      controller.refresherContentCheckBox.value = !controller.refresherContentCheckBox.value;
+                    },
                   ),
                 ],
               ),
@@ -178,7 +198,9 @@ class OnboardingScreenSix extends StatelessWidget {
           left: 0.w,
           right: 0.w,
           child: CustomButton(
-            onTap: () {},
+            onTap: () {
+              Get.toNamed(Routes.getHome());
+            },
             buttonTitle: AppStrings.next,
             buttonWidth: 185.w,
           ),

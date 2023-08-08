@@ -63,8 +63,17 @@ List<DropdownMenuItem<String>> get hajjYear{
   return menuItems;
 }
 
+
+  // dropdown values
   var selectedValue = "01:00 PM".obs;
   var zakatReminderDaysForRamadan = "15 Days".obs;
   var selectedYearForHajj = "2024".obs;
+
+  // checkBox values
+  var checkBox1 = true.obs;
+  var anualZakatCheckBox = true.obs;
+  var setGoalForHajjCheckBox = true.obs;
+  var remindersOfImportantDatesCheckBox = true.obs;
+  var refresherContentCheckBox = true.obs;
 
 }

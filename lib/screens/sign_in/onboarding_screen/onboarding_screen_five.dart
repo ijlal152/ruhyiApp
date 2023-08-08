@@ -7,6 +7,7 @@ import 'package:ruhiyapp/controllers/onboarding_controller.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/app_theme.dart';
+import 'package:ruhiyapp/widgets/custom_checkBox.dart';
 import 'package:ruhiyapp/widgets/custom_view.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 import '../../../utils/app_assets.dart';
@@ -72,7 +73,13 @@ class OnboardingScreenFive extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                               color: AppColors.darkBlue,
                             ),
-                            SvgPicture.asset(AppAssets.selectedSvg)
+                            //SvgPicture.asset(AppAssets.selectedSvg)
+                            CustomCheckBox(
+                              value: controller.checkBox1.value,
+                              onTap: (){
+                                controller.checkBox1.value = !controller.checkBox1.value;
+                              },
+                            ),
                           ],
                         ),
                         17.verticalSpace,

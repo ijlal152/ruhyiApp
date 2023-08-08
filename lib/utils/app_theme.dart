@@ -8,6 +8,10 @@ const urdu = "urduNajd";
 class AppTheme{
   static ThemeData appTheme = ThemeData(
     fontFamily: regular,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.white,
+      elevation: 0.2
+    )
     
   );
 }

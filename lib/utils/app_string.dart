@@ -76,5 +76,19 @@ class AppStrings{
   static const String remindersOfImportantDates = "Reminders of Important dates";
   static const String reminder2 = "Reminders of Important dates (e.g., Ramadan, Eid ul-Fitr, Eid ul-Adha, Day of Arafah)​";
   static const String refresherContentOnThe6ArticlesOfFaith = "Refresher content on the 6 articles of faith";
+
+  // Home Screen
+
+  static const String salam = "Salam";
+  static const String prayerTracker = "Prayer Tracker";
+  static const String dailyUpdates = "Daily Updates";
+  static const String home = "Home";
+  static const String prayer = "Prayer";
+  static const String quran = "Quran";
+  static const String tracker = "Tracker";
+  static const String ilm = "Ilm";
+  
+
+
  
 }
