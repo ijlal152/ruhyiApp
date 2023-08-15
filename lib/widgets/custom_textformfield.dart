@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
         decoration: InputDecoration(
           fillColor: Colors.white,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.only(left: 15.w, bottom: 8.h, right: 15.w),
+          contentPadding: EdgeInsets.only(left: 15.w, bottom: 5.h, right: 15.w),
           hintText: hintText,
           hintStyle: TextStyle(
             fontSize: 12.sp,

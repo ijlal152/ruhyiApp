@@ -113,6 +113,7 @@ class AppStrings{
 
   static const String ilmCenter= "Ilm Center";
   static const String fivePillarsOfIslam= "The Five Pillars of Islam";
+  static const String sixArticlesOfFaith= "The Six Articles of Faith​";
   static const String shahadah= "Shahadah";
   static const String salah= "Salah";
   static const String zakat= "Zakat";

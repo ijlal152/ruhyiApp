@@ -5,6 +5,7 @@ class AppAssets{
   static const String appTitleSplashImage = "assets/images/AppTitleSplash.svg";
   static const String backGround = "assets/images/backGroundPng.png";
   static const String backGround2 = "assets/images/bg2.png";
+  static const String backGround3 = "assets/images/whiteBG.png";
   static const String selectedSvg = "assets/images/checkRadioButton.svg";
   static const String unSelectedSvg = "assets/images/unCheckedRadioButton.svg";
   static const String oneSvg = "assets/images/one.svg";
