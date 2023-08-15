@@ -1,37 +1,39 @@
 import 'package:get/get.dart';
 
+import '../utils/app_assets.dart';
+import '../utils/app_string.dart';
 class SettingsController extends GetxController{
 
   var settingsObjects = [
     {
-      "img" : "assets/images/user_circle.svg",
-      "title" : "Profile",
-      "icon" : "assets/images/roundLeftArrow.svg",
+      "img" : AppAssets.user_circleSvg,
+      "title" : AppStrings.profile,
+      "icon" : AppAssets.roundLeftArrow,
       "subHeading" : null,
     },
     {
-      "img" : "assets/images/notifications_bell.svg",
-      "title" : "Notifications",
-      "icon" : "assets/images/roundLeftArrow.svg",
+      "img" : AppAssets.notifications_bell,
+      "title" : AppStrings.notifications,
+      "icon" : AppAssets.roundLeftArrow,
       "subHeading" : null,
     },
     {
-      "img" : "assets/images/hands.svg",
-      "title" : "Prayer Settings",
-      "icon" : "assets/images/roundLeftArrow.svg",
+      "img" : AppAssets.handsSvg,
+      "title" : AppStrings.settings,
+      "icon" : AppAssets.roundLeftArrow,
       "subHeading" : null,
     },
     {
-      "img" : "assets/images/bookSvg.svg",
-      "title" : "Quran Settings",
-      "icon" : "assets/images/roundLeftArrow.svg",
+      "img" : AppAssets.bookSvg,
+      "title" : AppStrings.quranSettings,
+      "icon" : AppAssets.roundLeftArrow,
       "subHeading" : null,
     },
     {
-      "img" : "assets/images/star.svg",
-      "title" : "Select Fiqh",
-      "icon" : "assets/images/roundLeftArrow.svg",
-      "subHeading" : "This is only for Zakat Calculations",
+      "img" : AppAssets.starSvg,
+      "title" : AppStrings.selectFiqh,
+      "icon" : AppAssets.roundLeftArrow,
+      "subHeading" : AppStrings.thisIsOnlyForZakatCalculations,
     },
   ];
 

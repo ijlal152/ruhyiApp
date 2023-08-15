@@ -58,7 +58,7 @@ class AppAssets{
   static const String homeSelected = "assets/images/homeSelected.svg";
   static const String homeSvg = "assets/images/home.svg";
   static const String boolSelected = "assets/images/boolSelected.svg";
-
-  
-
+  static const String selectedPrayer = "assets/images/selectedPrayer.svg";
+  //static const String user_circle = "assets/images/user_circle.svg";
+  static const String notifications_bell = "assets/images/notifications_bell.svg";
 }

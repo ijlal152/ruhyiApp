@@ -1,6 +1,7 @@
 class AppStrings{
 
   // Sign IN Screen Strings
+
   static const String youPersonalisedMuslimGuide = "Your Personalised Muslim Guide.";
   static const String emailAddress = "Email Address";
   static const String welcomeTo = "Welcome to ";
@@ -11,6 +12,7 @@ class AppStrings{
   static const String continueAsGuest = "Continue as guest";
 
   // Registeration form Sign Up Strings
+
   static const String pleaseAddYourDetailsToRegisterYourSelf = "Please add your details to register yourself.";
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
@@ -22,6 +24,7 @@ class AppStrings{
   static const String register = "Register";
 
   // Otp screen
+
   static const String pleaseEnterOneTimePasscode= "Please enter One Time Passcode to Register";
   static const String yourOneTimePasscodeHasBeenSent= "Your One Time Passcode has been sent to ";
   static const String email = "ijlal.hussain@veroke.com";
@@ -30,6 +33,7 @@ class AppStrings{
   static const String resendCode = "Resend Code";
 
   // Onboarding Screen 1
+
   static const String onboardingHeading1 = "I want rūhiy to help me…​";
   static const String onboardingText1 = "Improve my spirtual practice";
   static const String onboardingText2 = "Improve my overall well-being";
@@ -38,12 +42,14 @@ class AppStrings{
   static const String next = "Next";
 
   // Onboarding Screen 2
+
   static const String onboardingHeading2 = "Let's start \nwith how you'd like ruhiy to help you with your spirtual practice";
   static const String onboardingText5 = "Remind me of prayer times";
   static const String onboardingText6 = "Remind me to read Quran";
   static const String onboardingText7 = "Refresh my understanding in my core beliefs from time to time";
 
   // Onboarding Screen 3
+
   static const String onboardingHeading3 = "To optimize your \nexperience, we recommend adding the following blocks in your calendar​";
   static const String onboardingText8 = "Prayers";
   static const String onboardingText9 = "Quran recitation";
@@ -51,6 +57,7 @@ class AppStrings{
   static const String onboardingText11 = "Time for self-learning and enlightenment";
 
   // Onboarding Screen 4
+
   static const String onboardingHeading4 = "Which Prayers do you want reminders for?";
   static const String fajarPrayer = "Fajr";
   static const String dhuhrPrayer = "Dhuhr";
@@ -61,6 +68,7 @@ class AppStrings{
   static const String linkToCalendar = "Link to Calendar";
 
   // onboarding screen 5
+
   static const String onboardingHeading5 = "Would you like to schedule time for Quran recitation?​";
   static const String yesRemindMe = "Yes, remind me!";
   static const String timeOfDay = "Time of Day";
@@ -68,6 +76,7 @@ class AppStrings{
   static const String youGetNotifiedWhenTimeIsOver = "You get notified when time is over";
 
   // onboarding screen 6
+
   static const String onboardingHeading6 = "Let us know what reminders you’d like to receive​​";
   static const String annualReminderToPayZakat = "Annual Reminder to Pay Zakat​";
   static const String zakatReminderBeforeRamadan = "Zakat Reminder before Ramadan";
@@ -87,6 +96,35 @@ class AppStrings{
   static const String quran = "Quran";
   static const String tracker = "Tracker";
   static const String ilm = "Ilm";
+
+  // Settings Screen
+
+  static const String settings = "Settings";
+  static const String profile = "Profile";
+  static const String notifications = "Notifications";
+  static const String prayerSettings = "Prayer Settings";
+  static const String quranSettings = "Quran Settings";
+  static const String selectFiqh = "Select Fiqh";
+  static const String thisIsOnlyForZakatCalculations = "This is only for Zakat Calculations";
+  static const String deleteAccount = "Delete Account";
+  static const String logout = "Logout";
+
+  // Ilm Screen
+
+  static const String ilmCenter= "Ilm Center";
+  static const String fivePillarsOfIslam= "The Five Pillars of Islam";
+  static const String shahadah= "Shahadah";
+  static const String salah= "Salah";
+  static const String zakat= "Zakat";
+  static const String sawm= "Sawm";
+  static const String hajj= "Hajj";
+  static const String struggle= "Struggle";
+  static const String oneGod= "One God";
+  static const String angels= "Angels";
+  static const String prophetBelief= "Prophets Belief";
+  static const String judgmentDay= "Judgment Day";
+  static const String fate= "Fate";
+  static const String hollyBooks= "Holly Books";
   
 
 

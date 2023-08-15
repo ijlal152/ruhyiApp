@@ -36,6 +36,14 @@ class HomeController extends GetxController{
     ),
   ];
 
+  var prayerList = [
+    AppStrings.fajarPrayer,
+    AppStrings.dhuhrPrayer,
+    AppStrings.asrPrayer,
+    AppStrings.maghribPrayer,
+    AppStrings.ishaPrayer
+  ];
+
 
 
 }

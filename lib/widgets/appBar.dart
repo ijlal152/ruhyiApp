@@ -76,8 +76,10 @@ class HomeAppBar extends StatelessWidget {
 
 class MyAppBar extends StatelessWidget {
   final String title;
-  final VoidCallback onTap;
-  const MyAppBar({super.key, this.title = "", required this.onTap});
+  final bool enableSecondIcon;
+  final VoidCallback onTap1;
+  final VoidCallback onTap2;
+  const MyAppBar({super.key, this.title = "", required this.onTap1, this.enableSecondIcon = true, required this.onTap2});
 
   @override
   Widget build(BuildContext context) {
@@ -100,9 +102,17 @@ class MyAppBar extends StatelessWidget {
       ),
       actions: <Widget>[
         InkWell(
-          onTap: onTap,
+          onTap: onTap1,
           child: SvgPicture.asset( AppAssets.qiblaSvg, height: 40.h, width: 40.w,)
         ),
+        enableSecondIcon ? Padding(
+          padding: EdgeInsets.only(left: 10.w),
+          child: InkWell(
+              onTap: onTap1,
+              child: SvgPicture.asset( AppAssets.personSvg, height: 40.h, width: 40.w,)
+          ),
+        ) : const SizedBox(),
+
         20.horizontalSpace
       ],
     );

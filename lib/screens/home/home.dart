@@ -35,6 +35,7 @@ class Home extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          fixedColor: AppColors.greenColor,
           items: homeController.navBarItems,
           currentIndex: homeController.selectedIndexForNavBar.value,
           onTap: (value){

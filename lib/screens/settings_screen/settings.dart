@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:ruhiyapp/utils/app_assets.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
+import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/widgets/appBar.dart';
 import 'package:ruhiyapp/widgets/custom_button.dart';
 import 'package:ruhiyapp/widgets/custom_view.dart';
@@ -23,8 +24,10 @@ class SettingsScreen extends StatelessWidget {
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(0.08.sh),
           child: MyAppBar(
-            title: "Setting",
-            onTap: (){}
+            title: AppStrings.settings,
+            onTap1: (){},
+            onTap2: (){},
+            enableSecondIcon: false,
           )
         ),
         body: Container(

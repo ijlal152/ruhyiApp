@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:ruhiyapp/widgets/daily_prayer_tracker.dart';
 
 import '../../controllers/home_controller.dart';
 import '../../utils/app_assets.dart';
@@ -46,9 +48,9 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    nextPrayerWidget(),
+                    nextPrayerWidget(), // shows next prayer timing
                     10.verticalSpace,
-                    prayerTimingWidget(),
+                    prayerTimingWidget(),  // shows prayer background banner
                     10.verticalSpace,
                     LabelWidget(
                       text: "Prayer Tracker",
@@ -56,6 +58,31 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: AppColors.darkBlue,
                     ),
+                    10.verticalSpace,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: List.generate(homeController.prayerList.length, (index) => Container(
+                        height: 56.h,
+                        width: 60.w,
+                        decoration: BoxDecoration(
+                          color: AppColors.bgColor,
+                          borderRadius: BorderRadius.circular(10.r)
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.asset(AppAssets.selectedPrayer),
+                            5.verticalSpace,
+                            LabelWidget(
+                              text: homeController.prayerList[index].toString(),
+                              fontSize: 10.sp,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.greenColor,
+                            ),
+                          ],
+                        ),
+                      )),
+                    )
                   ],
                 ),
               ),
