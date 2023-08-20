@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "27869014226",
+    "project_id": "ruhiy-b6756",
+    "storage_bucket": "ruhiy-b6756.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27869014226:android:166d7c136560df7bcc650b",
+        "android_client_info": {
+          "package_name": "com.example.ruhiyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27869014226-avpg1ee0kqi0b8ueo7mivjqgf708qf12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV4zviUUVkNyT5EFc5FsWcuR7VpsiK-w8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27869014226-avpg1ee0kqi0b8ueo7mivjqgf708qf12.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "27869014226-clnh49a7sip3qnpai8avam6c4gfdmadq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ruhiyapp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

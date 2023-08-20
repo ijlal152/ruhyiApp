@@ -1,35 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ruhiyapp/utils/app_colors.dart';
+import 'package:ruhiyapp/widgets/flushbar.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
-  const CustomTextFormField({super.key, this.hintText = '', required this.controller});
+  final String? Function(String?)? validator;
+  final List<TextInputFormatter>? inputFormatters;
+  const CustomTextFormField({super.key, this.hintText = '', required this.controller, this.validator, this.inputFormatters});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50.h,
-      alignment: Alignment.centerLeft,
-      decoration: BoxDecoration(
-        color: Colors.white,
+    return TextFormField(
+      controller: controller,
+      cursorColor: AppColors.greenColor,
+      inputFormatters: inputFormatters,
+      decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: AppColors.textFieldBorderColor,
+            width: 1.w
+          ),
+          borderRadius: BorderRadius.circular(10.r),     
+    ),
+        border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
-          border: Border.all(color: AppColors.textFieldBorderColor)),
-      child: TextFormField(
-        controller: controller,
-        cursorColor: AppColors.greenColor,
-        decoration: InputDecoration(
-          fillColor: Colors.white,
-          border: InputBorder.none,
-          contentPadding: EdgeInsets.only(left: 15.w, bottom: 5.h, right: 15.w),
-          hintText: hintText,
-          hintStyle: TextStyle(
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w400
+          borderSide: const BorderSide(
+            color: AppColors.textFieldBorderColor,
           )
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: const BorderSide(
+            color: AppColors.textFieldBorderColor,
+          )
+        ),
+        contentPadding: EdgeInsets.only(left: 15.w, bottom: 5.h, right: 15.w),
+        hintText: hintText,
+        hintStyle: TextStyle(
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w400
+        )
       ),
+      validator: validator,
     );
   }
 }

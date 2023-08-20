@@ -5,8 +5,10 @@ import 'package:ruhiyapp/utils/app_colors.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 import 'package:ruhiyapp/utils/enums.dart';
 import 'package:ruhiyapp/utils/routes.dart';
+import 'package:ruhiyapp/widgets/flushbar.dart';
 import 'package:ruhiyapp/widgets/label_widgets.dart';
 import 'package:ruhiyapp/widgets/radio_buttons.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../controllers/signIn_controller.dart';
 import '../../utils/app_assets.dart';
@@ -18,6 +20,8 @@ class RegistrationFormSignUp extends StatelessWidget {
   RegistrationFormSignUp({super.key});
 
   var controller = Get.find<SignInController>();
+  late final FirebaseAuth auth;
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +54,9 @@ class RegistrationFormSignUp extends StatelessWidget {
 
                 40.verticalSpace,
 
-                Form(child: Column(
+                Form(
+                  key: controller.formKey,
+                  child: Column(
                   children: [
                     Align(
                       alignment: Alignment.topLeft,
@@ -65,6 +71,11 @@ class RegistrationFormSignUp extends StatelessWidget {
                     CustomTextFormField(
                       hintText: AppStrings.firstName,
                       controller: controller.firstNameController,
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "${AppStrings.firstName} is required";
+                        }
+                      },
                     ),
                     20.verticalSpace,
                     Align(
@@ -80,6 +91,11 @@ class RegistrationFormSignUp extends StatelessWidget {
                     CustomTextFormField(
                       hintText: AppStrings.lastName,
                       controller: controller.lastNameController,
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "${AppStrings.firstName} is required";
+                        }
+                      },
                     ),
                     20.verticalSpace,
                     Align(
@@ -94,7 +110,12 @@ class RegistrationFormSignUp extends StatelessWidget {
                     7.verticalSpace,
                     CustomTextFormField(
                       hintText: AppStrings.emailAddress,
-                      controller: controller.emailController,
+                      controller: controller.emailController2,
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "${AppStrings.firstName} is required";
+                        }
+                      },
                     ),
                     20.verticalSpace,
 
@@ -120,6 +141,11 @@ class RegistrationFormSignUp extends StatelessWidget {
                     CustomTextFormField(
                       hintText: AppStrings.dateOfBirth,
                       controller: controller.dateOfBirthController,
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "${AppStrings.firstName} is required";
+                        }
+                      },
                     ),
                     30.verticalSpace,
                     Align(
@@ -145,6 +171,7 @@ class RegistrationFormSignUp extends StatelessWidget {
                                 onTap: () {
                                   signInController
                                       .selectGender(GenderType.Male.name);
+                                      print(signInController.genderType);
                                 }),
                             15.horizontalSpace,
                             LabelWidget(
@@ -177,8 +204,10 @@ class RegistrationFormSignUp extends StatelessWidget {
                             ),
                           ],
                         ),
+
                       ],
                     ),
+                    30.verticalSpace,
                   ],
                 ))
 
@@ -196,7 +225,10 @@ class RegistrationFormSignUp extends StatelessWidget {
                     buttonTitle: AppStrings.register,
                     enableShadow: false,
                     onTap: (){
-                      Get.toNamed(Routes.getSignUpOtpVerification());
+                      if(signInController.formKey.currentState!.validate()){
+
+                      }
+                      //Get.toNamed(Routes.getSignUpOtpVerification());
                     }
                 ),
               ),
