@@ -8,13 +8,15 @@ class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final String? Function(String?)? validator;
+  final TextInputType textInputType;
   final List<TextInputFormatter>? inputFormatters;
-  const CustomTextFormField({super.key, this.hintText = '', required this.controller, this.validator, this.inputFormatters});
+  const CustomTextFormField({super.key, this.hintText = '', this.textInputType = TextInputType.text ,required this.controller, this.validator, this.inputFormatters});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      keyboardType: textInputType,
       cursorColor: AppColors.greenColor,
       inputFormatters: inputFormatters,
       decoration: InputDecoration(

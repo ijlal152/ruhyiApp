@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:hijri/hijri_calendar.dart';
 import 'package:ruhiyapp/widgets/daily_prayer_tracker.dart';
 
 import '../../controllers/home_controller.dart';
@@ -20,13 +21,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return GetBuilder<HomeController>(
+      builder: (homeController){
+        return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(0.08.sh),
           child: HomeAppBar(
             userName: "Ijlal Hussain",
-            islamicDate: "20 Sha'ban 1444 AH",
+            islamicDate: homeController.hijriDate,
             onTap1: () {},
             onTap2: () {
               Get.toNamed(Routes.getSettingsScreen());
@@ -90,6 +93,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+      }
     );
   }
 }

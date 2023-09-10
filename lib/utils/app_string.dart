@@ -4,6 +4,7 @@ class AppStrings{
 
   static const String youPersonalisedMuslimGuide = "Your Personalised Muslim Guide.";
   static const String emailAddress = "Email Address";
+  static const String password = "Password";
   static const String welcomeTo = "Welcome to ";
   static const String ruhiyee = "rūhiy";
   static const String signIn = "Sign In";

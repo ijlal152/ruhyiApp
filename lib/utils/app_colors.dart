@@ -7,4 +7,6 @@ class AppColors{
   static const Color darkBlue = Color.fromRGBO(3, 46, 18, 1);
   static const Color bgColor = Color.fromRGBO(242, 242, 242, 1);
   static const Color bottomItemTextColor = Color.fromRGBO(160, 163, 177, 1);
+  static const Color white50 =  Color.fromRGBO(255, 255, 255, 0.50);
+
  }

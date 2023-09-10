@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:hijri/hijri_calendar.dart';
 import 'package:ruhiyapp/utils/app_assets.dart';
 import 'package:ruhiyapp/utils/app_string.dart';
 
 class HomeController extends GetxController{
   
   var selectedIndexForNavBar = 0.obs;
+
+  final today = HijriCalendar.now();
+  var hijriDate;
+
+  void getHijiDate(){
+    today.toFormat("dd MMMM yyyy");
+    hijriDate = today.toFormat("dd MMMM yyyy");
+    update();
+  }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    getHijiDate();
+    super.onInit();
+  }
+  
 
   final navBarItems = [
     BottomNavigationBarItem(
@@ -43,7 +61,4 @@ class HomeController extends GetxController{
     AppStrings.maghribPrayer,
     AppStrings.ishaPrayer
   ];
-
-
-
 }

@@ -40,9 +40,11 @@ dependencies:
   flutter_svg:
   pin_code_fields: ^8.0.1
   firebase_core: ^2.15.1
+  cloud_firestore: ^4.9.1
   firebase_auth: ^4.7.3
   fluttertoast: ^8.2.2
   another_flushbar: ^1.12.30
+  hijri: ^3.0.0
   
   
 

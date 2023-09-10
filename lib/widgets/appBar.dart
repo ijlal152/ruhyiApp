@@ -57,12 +57,12 @@ class HomeAppBar extends StatelessWidget {
       ),
 
       actions: <Widget>[
-        InkWell(
+        GestureDetector(
           onTap: onTap1,
           child: SvgPicture.asset( AppAssets.qiblaSvg, height: 40.h, width: 40.w,)
         ),
         10.horizontalSpace,
-        InkWell(
+        GestureDetector(
           onTap: onTap2,
           child: SvgPicture.asset( AppAssets.personSvg, height: 40.h, width: 40.w,)
         ),
@@ -101,13 +101,13 @@ class MyAppBar extends StatelessWidget {
         color: AppColors.darkBlue,
       ),
       actions: <Widget>[
-        InkWell(
+        GestureDetector(
           onTap: onTap1,
           child: SvgPicture.asset( AppAssets.qiblaSvg, height: 40.h, width: 40.w,)
         ),
         enableSecondIcon ? Padding(
           padding: EdgeInsets.only(left: 10.w),
-          child: InkWell(
+          child: GestureDetector(
               onTap: onTap1,
               child: SvgPicture.asset( AppAssets.personSvg, height: 40.h, width: 40.w,)
           ),
